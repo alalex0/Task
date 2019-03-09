@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+
+
+<html lange ="en">
+
+
+ <head>
+
+		<title>registration</title>
+		<meta charset="UTF-8">
+	    <meta name="description" content="Форма для Регистрация">
+	    <meta name="keywords" content="Регистрация детали">
+
+
+ </head>
+	<body>
+		<h1><em>Регистрация</em></h1>
+	
+	<form action="#" method="post" enctype="multipart/form-data">
+		<fieldset>
+			<legend align="center" ><i>Заполните данные</i></legend>
+			
+			<p>
+			  
+			  <label for="login"> <strong><em>Введите Логин</em></strong></label>
+			  <br>
+			  <input id="login" size="30" placeholder="введите логин" required minlength="3" maxlength="5">
+
+			</p>
+			
+			<p>
+			  
+			  <label for="email"><strong><em>Введите Email </em></strong></label>
+			  <br>
+			  <input id="email" type="Email" size="30" placeholder="email@email.mail" required>
+
+			</p>
+			<p>
+			
+			  <label for="password"> <strong><em>Введите пароль  </em></strong></label></label>
+			  <br>
+			  <input id="password" type="password" size="30" placeholder="введите пароль" required minlength="5" maxlength="8">
+
+			</p>
+			<p>
+			
+			  <label for="password2"> <strong><em>Подтвердите пароль  </em></strong></label></label>
+			  <br>
+			  <input id="password2" type="password" size="30" placeholder="подтвердите пароль" required minlength="5" maxlength="8">
+
+			</p>
+			
+			<p>
+				<!--кнопка для отправки данных формы-->
+			  <input type="submit" value="отправить">
+
+
+			</p>
+
+		</fieldset>
+
+	</form>
+
+	<form>
+		<fieldset>
+			<legend> <i>Загрузка</i></legend>
+			
+			<p>
+			<label><strong><em>Загрузите изображение</em></strong></label>
+ 
+			</p>
+			<!--'multip</strong>le много файлов accept image/* изображение любого типа -->
+		    		<input type="file" accept="image/*">
+
+		</fieldset>
+
+	</form>
+	
+	<p align="center">
+
+	 <em><a href="index.html"><i>доступные детали</i></a></em>
+	
+	</p>
+
+	</body>
+</html>
