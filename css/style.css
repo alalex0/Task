@@ -1,0 +1,15 @@
+body{
+	color: black;
+}
+
+
+
+nav li {
+list-style-type: none;
+display: inline-block;
+width: 100px;
+height: 80px;
+background: #f36868;
+border-radius: 20px;
+}
+
