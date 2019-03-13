@@ -1,0 +1,22 @@
+body{
+background-image: url(image/10.png); 
+
+ background-size: contain;
+ /*background-size: cover; полный рисунок*/
+/*background-color: #DDBABB;/=*/
+
+/*#177ea7;*/
+/*background-position: top;
+background-repeat: no-repeat;
+/*background-attachment: scroll;*/
+}
+
+h1, h2 {
+	color: #177ea7;
+}
+
+p {
+/*font-size: 30pt; увеличение текста*/
+color: #821014;
+
+}
