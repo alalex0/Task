@@ -1,0 +1,43 @@
+@import url("grid.css");
+body{
+background: url(image/15.jpg);
+background-position: center; 
+
+}
+.container{
+max-width: 1200px;
+margin: 0 auto;
+}
+.to{
+/*display: inline-block;*/
+border: 1px solid red;
+width: 150px;
+height: 150px;
+margin: 5px;
+}
+.block{
+/*box-sizing: content-box;*/ 
+width: auto;
+}
+#turn{
+display: inline-block;
+width: 150px;
+height: 474px;
+}
+.relative{
+position: relative;
+bottom: 324px;
+}
+button {
+background-color:whitesmoke;/*#DDBABB;*/ 	
+color: #821014;
+}
+.centerto3{
+position: relative;
+bottom: 0px;
+}
+/*.center{
+position:absolute;
+top: 15px;
+left: 140px;
+}*/
