@@ -1,6 +1,8 @@
 body{
 /*background-image: url(image/7.jpg); */
 background-color: #A7BFAE;
+background-image: url(../image/15.jpg);
+background-attachment: fixed;
 }
 
 h3 a {
