@@ -1,0 +1,32 @@
+.form{
+display: none;
+}
+.form:target{
+display: block;
+position: absolute;
+background: violet;
+top: 50px;
+left: 500px;
+}
+.shadow{
+background: violet;
+box-shadow: 0px 0px 10px;/* rgba(0,0,0,0.5);*/
+}
+.shadowIn{
+box-shadow: inset;
+box-shadow: 0px 0px 10px;
+}
+input:focus{
+	color: grey;
+}
+.hover:active{
+color: orange;
+}
+input[type="checkbox"] {
+box-shadow: inset;
+box-shadow: 0px 0px 5px;
+}
+.hoverA:active{
+background: violet;
+box-shadow: 0px 0px 10px;/* rgba(0,0,0,0.5);*/
+}
