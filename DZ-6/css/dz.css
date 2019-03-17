@@ -1,0 +1,18 @@
+
+li ul{
+display: none;
+/*position: absolute; элнмент остается на месте*/
+}
+li:hover ul{
+display: block;
+}
+/*
+
+через class
+.hidden{
+opacity: 0;
+}
+.hidden:hover{
+opacity: 1;
+}
+*/
