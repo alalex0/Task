@@ -1,0 +1,87 @@
+@import url("grid.css");
+
+div li {
+list-style-type: none;
+display: inline-block;
+/*width: 100px;
+height: 80px;*/
+background: #f36868;
+border-radius: 20px;
+}
+
+a {
+text-decoration: none;
+color: none;
+}
+.menu ul li{
+padding: 5px;
+}
+.menu ul li:hover{
+background-color: red;
+}
+
+.menu ul{
+position: relative;
+padding: 0;
+}
+
+.menu ul ul {
+padding-top: 7px;
+}
+
+.menu ul ul{
+  display: none;
+  position: absolute;
+  margin-left: 0px;
+}
+.menu li:hover ul{
+display: block;
+}
+
+.container {
+    max-width: 960px;
+    margin: 0 auto;
+}
+
+.card {
+    border: 1px solid black;
+    height: 200px;
+    margin: 5px;
+}
+
+.cards {
+    margin-bottom: 30px;
+}
+
+div {
+    box-sizing: border-box;
+}
+.absolute {
+height: 50px;
+border: 1px solid black;
+background: yellow;
+position: absolute;
+top: 0px;
+left: 0px;
+right: 0px;    
+}
+
+
+@media screen and (max-width: 480px){
+    .col-xs-12{/*шаблон маленький*/
+    width: 100%;
+    }
+    .card{
+    height: 95vw;
+    }
+}
+
+@media screen and (min-width: 481px)
+and (max-width: 789px){
+	.col-s-6{
+		width: 50%;
+	}
+	.card{
+		height: calc(50vw-10px);
+	}
+	}
