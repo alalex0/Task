@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>cardgoods</title>
+    <link rel="stylesheet" type="text/css" href="css/cardpart.css">
+</head>
+<body>
+    <div class="row paint">
+    <div class="container">
+        <div class="col-12">
+            <ul class="goodsmenu flex">
+                <li class="hoveroder"><a href="index.html">Главная</a></li>
+                <li class="hoveroder"><a href="#">Каталог</a></li>
+                <li class="hoveroder"><a href="#">Поиск</a></li>
+                <li class="hoveroder"><a href="#">Войти</a></li>
+            </ul>
+        </div>
+    </div>
+</div>
+    
+<div class="container">
+	<div class="row">
+    <div class="col-12">
+        <ul class="slider shadow">
+            <li class="active"><img src="image/fon4.jpg"></li>
+            <li><img src="image/fuel.jpg"></li>
+            <li><img src="image/17.jpg"></li>
+        </ul>
+    </div>
+    </div>
+</div>
+
+<div class="container">
+    <div class="row">
+        
+        <div class="col-4">
+            <div class="card shadowIn">
+        Товар  
+        <ul class="butadd flex">      
+           <li> <button class="hover shadowIn" type="submit">Добавить</button></li>  
+           <li class="hoveroder"><a href="#cardpartmod">Оформит заказ</a></li>
+        </ul>
+            </div>
+        </div>
+        <div class="col-4">
+            <div class="card shadowIn">
+               Аналог 1 
+               <ul class="butadd flex">      
+           <li> <button class="hover shadowIn" type="submit">Добавить</button></li>
+           <li class="hoveroder" ><a href="#cardpartmod">Оформит заказ</a></li>
+        </ul>
+            </div>
+        </div>
+        <div class="col-4">
+            <div class="card shadowIn">
+                Аналог 2
+                <ul class="butadd flex">      
+           <li> <button class="hover shadowIn" type="submit">Добавить</button></li>
+           <li class="hoveroder"><a href="#cardpartmod">Оформит заказ</a></li>
+        </ul>
+            </div>
+        </div>
+    </div>
+
+    <div class="row">
+        
+        <div class="col-12">
+            <div class="carddescription shadowIn">
+                Описание Товара
+                <p>
+                    Амортизатор — устройство для гашения колебаний (демпфирования) и поглощения толчков и ударов подвижных элементов (подвески, колёс), а также корпуса самого транспортного средства, посредством превращения механической энергии движения (колебаний) в тепловую. 
+                </p>
+                <p class="flex" align="left">Производитель:<a href="#">Suzuki</a></p>
+            </div>
+        </div>
+    </div>    
+</div>
+<!--форма Оформить Заказ-->
+
+<div id="cardpartmod" class="form shadow">  
+    <h1><em>Оформить Заказ</em></h1>
+ <form action="#" autocomplete="on" method="post" enctype="multipart/form-data">
+    <fieldset class="shadowIn">
+        <label for="firstN" ><em>Ваше имя</em></label>
+        <br>
+        <input id="firstN" size="30" type="text" placeholder="ваше имя" required>
+      <P>
+        <label for="lastN" ><em>Ваш E-mail</em></label>
+        <br>
+        <input id="lastN" size="30" type="email" placeholder="email@emai.email" required>
+      </P>      
+    </fieldset>     
+    <fieldset class="shadowIn">
+        <legend class="hoverA">Оплата</legend>
+        <p>
+            <label><input class="hoverA" required type="radio" name="pay"> Наличные </label>
+            <br>
+            <label><input class="hoverA" required type="radio" name="pay">Банковска карта</label>  
+        </p>
+</fieldset>
+    
+        </fieldset>     
+        <p align="center" >
+            <button class="hover shadowIn" type="submit" >Отправить данные</button>
+        </p>
+
+     </form>    
+</div>
+<footer class="footer flexfooter" >
+    <address> Попов Александр</address>
+        <time>2019-03-24</time>
+</footer>
+</body>
+</html>

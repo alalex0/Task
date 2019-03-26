@@ -1,0 +1,145 @@
+@import url("grid.css");
+
+body{
+	background-image: url(../image/fon5.jpg);
+	background-size: cover;
+	background-attachment: fixed;
+	font-family: Georgia;
+}
+a {
+text-decoration: none;
+}
+.goodsmenu a {
+color: whitesmoke;
+}
+.hoveroder:hover {
+background-color: #DDBABB;
+}
+.paint, footer, div li {
+background: #827677;
+border-radius: .7em;
+}
+.card a, button, p a {
+font-size: .7em;
+color: black;
+border-radius: .1em;
+}
+.container{
+max-width: 960px;
+margin: 0 auto;
+}
+.slider{
+margin: 1em;
+list-style-type: none;
+padding: 0;
+}
+.flex{
+display: flex;
+justify-content: center;/*выстраивание друг за другом горизонтальное выравнивание*/
+justify-content: space-around;
+/*
+display: flex;
+justify-content: flex-start;выстраивание друг
+ за другом горизонтальное выравнивание
+justify-content: flex-end;выстраивание к концу
+justify-content: center;по уентру
+justify-content: space-around;пространсто делится 
+равным образом автоматом
+justify-content: space-between;прилепание к стенкам
+*/
+}
+.flexfooter{
+display: flex;
+justify-content: space-between;
+}
+.goodsmenu li {
+display: inline-block;
+text-transform:uppercase;
+font-size: 1.5em;
+}
+.slider li {
+display: none;
+}
+.slider li.active {
+display: block;
+}
+.slider img{
+height: 200px;
+width: 100%;
+}
+li {
+list-style-type: none;
+}
+.card{
+border: 1px solid black;
+height: 200px;
+width: auto;
+margin: 1em;
+text-align: center;
+background-image: url('../image/16.jpg');
+background-size: contain; 
+background-repeat: round;
+border-radius: 1em;
+}
+.carddescription{
+border: 1px solid black;
+height: 200px;
+width: auto;
+margin: 1em;
+text-align: center;
+background-image: url('../image/fon6.jpg');
+background-size: cover;
+background-attachment: fixed;
+background-repeat: no-repeat;
+border-radius: 1em;
+}
+.butadd {
+position: relative;
+top: 70%;
+}
+.butadd li {
+display: inline-block;
+}
+.footer{
+border:  1px solid #827677;
+background: #827677;
+font-size: 0.5em;
+}
+/*Форма оформления заказа модальное окно*/
+.form{
+display: none;
+}
+.form:target{
+display: block;
+position: absolute;
+/*position: 50%;*/
+top: 10%;
+left: 50%;
+/*background-image: url(../image/14.jpg);
+background-repeat: no-repeat;*/
+background: whitesmoke
+}
+.shadow{
+	/*+- 5горизонтальное смещение 10вверх-+ вниз размытие 
+15радиус размытия 2 растяжение*/
+/*первые значения по 0 одинаковая без размытия*/
+/*box-shadow: -5px 10px 15px 2px #333333;*/
+box-shadow: 5px 10px 15px 2px #333333;/* rgba(0,0,0,0.5);*/
+}
+.shadowIn{
+box-shadow: inset;
+box-shadow: 0px 0px 10px;
+}
+input:focus{
+	color: grey;
+}
+.hover:active{
+color: orange;
+}
+input[type="checkbox"] {
+box-shadow: inset;
+box-shadow: 0px 0px 5px;
+}
+.hoverA:active{
+box-shadow: 0px 0px 10px;/* rgba(0,0,0,0.5);*/
+}

@@ -1,6 +1,6 @@
 @import url("grid.css");
 body{
-background: url(image/15.jpg);
+/*background: url(image/15.jpg);*/
 background-position: center; 
 
 }
@@ -41,3 +41,4 @@ position:absolute;
 top: 15px;
 left: 140px;
 }*/
+
