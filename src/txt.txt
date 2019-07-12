@@ -1,0 +1,430 @@
+(c) Корпорация Майкрософт (Microsoft Corp.), 2009. Все права защищены.
+
+c:\users\28952\desktop\ospanel>mysql -u root -p
+Enter password:
+Welcome to the MySQL monitor.  Commands end with ; or \g.
+Your MySQL connection id is 3
+Server version: 5.7.23 MySQL Community Server (GPL)
+
+Copyright (c) 2000, 2018, Oracle and/or its affiliates. All rights reserved.
+
+Oracle is a registered trademark of Oracle Corporation and/or its
+affiliates. Other names may be trademarks of their respective
+owners.
+
+Type 'help;' or '\h' for help. Type '\c' to clear the current input statement.
+
+mysql> created database db_name
+    -> created database db_name;
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server or the right syntax to use near 'created database db_name
+created database db_name' at line 1
+mysql> create database db_name;
+Query OK, 1 row affected (0.03 sec)
+
+mysql> show batabases;
+ERROR 2006 (HY000): MySQL server has gone away
+No connection. Trying to reconnect...
+Connection id:    7
+Current database: *** NONE ***
+
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server or the right syntax to use near 'batabases' at line 1
+mysql> show databases;
++--------------------+
+| Database           |
++--------------------+
+| information_schema |
+| db_name            |
+| justhello          |
+| mysql              |
+| performance_schema |
+| sys                |
++--------------------+
+6 rows in set (0.07 sec)
+
+mysql> use db_name;
+Database changed
+mysql> select * from books;
+ERROR 2006 (HY000): MySQL server has gone away
+No connection. Trying to reconnect...
+Connection id:    10
+Current database: db_name
+
+ERROR 1146 (42S02): Table 'db_name.books' doesn't exist
+mysql> select * from books;
+ERROR 1146 (42S02): Table 'db_name.books' doesn't exist
+mysql> use db_name;
+Database changed
+mysql> select * from books;
+ERROR 1146 (42S02): Table 'db_name.books' doesn't exist
+mysql> select * from Books;
+ERROR 1146 (42S02): Table 'db_name.books' doesn't exist
+mysql> show tables;;
+ERROR 2006 (HY000): MySQL server has gone away
+No connection. Trying to reconnect...
+Connection id:    11
+Current database: db_name
+
++--------------------+
+| Tables_in_db_name  |
++--------------------+
+| author             |
+| book               |
+| migration_versions |
++--------------------+
+3 rows in set (0.14 sec)
+
+ERROR:
+No query specified
+
+mysql> insert into author (`name`) values ('Твен');
+ERROR 2013 (HY000): Lost connection to MySQL server during query
+mysql> insert into author (`name`) values ('Твен');
+ERROR 2006 (HY000): MySQL server has gone away
+No connection. Trying to reconnect...
+Connection id:    12
+Current database: db_name
+
+Query OK, 1 row affected (0.14 sec)
+
+mysql> insert into author (`name`) values ('Толстой');
+Query OK, 1 row affected (0.00 sec)
+
+mysql> select * from иook;
+ERROR 1146 (42S02): Table 'db_name.иook' doesn't exist
+mysql> select * from иbook;
+ERROR 1146 (42S02): Table 'db_name.иbook' doesn't exist
+mysql> select * from book;
+Empty set (0.00 sec)
+
+mysql> select * from author;
++----+---------+
+| id | name    |
++----+---------+
+|  1 | Твен    |
+|  2 | Толстой |
++----+---------+
+2 rows in set (0.00 sec)
+
+mysql> select * from book;
+ERROR 2006 (HY000): MySQL server has gone away
+No connection. Trying to reconnect...
+Connection id:    20
+Current database: db_name
+
++----+-----------+--------+-------------+
+| id | author_id | title  | description |
++----+-----------+--------+-------------+
+|  1 |         1 | dfdfdf | sdad        |
++----+-----------+--------+-------------+
+1 row in set (0.14 sec)
+
+mysql> select * from book;
+
+Microsoft Windows [Version 6.1.7601]
+(c) Корпорация Майкрософт (Microsoft Corp.), 2009. Все права защищены.
+
+c:\users\28952\desktop\ospanel>cd C:\Users\28952\Desktop\OSPanel\domains
+
+C:\Users\28952\Desktop\OSPanel\domains>cd books
+
+C:\Users\28952\Desktop\OSPanel\domains\books>composer require server --dev
+The "https://repo.packagist.org/packages.json" file could not be downloaded:
+https://repo.packagist.org could not be fully loaded, package information was loaded from the local cache and mayf date
+
+
+  [Composer\Downloader\TransportException]
+  The "https://flex.symfony.com/aliases.json" file could not be downloaded: curl_setopt(): CURLOPT_DNS_USE_GLOBAL
+   cannot be activated when thread safety is enabled
+  Peer certificate CN=`*.ifmo.ru' did not match expected CN=`flex.symfony.com'
+  Failed to enable crypto
+  failed to open stream: operation failed
+
+
+require [--dev] [--prefer-source] [--prefer-dist] [--no-progress] [--no-suggest] [--no-update] [--no-scripts] [---dev] [--update-with-dependencies] [--update-with-all-dependencies] [--ignore-platform-reqs] [--prefer-stable] [-owest] [--sort-packages] [-o|--optimize-autoloader] [-a|--classmap-authoritative] [--apcu-autoloader] [--unpack] ckages>]...
+
+
+C:\Users\28952\Desktop\OSPanel\domains\books>php bin/console server:run
+
+
+ [OK] Server listening on http://127.0.0.1:8000
+
+
+ // Quit the server with CONTROL-C.
+
+^C
+C:\Users\28952\Desktop\OSPanel\domains\books>php bin/console make:controller BookController
+
+ created: src/Controller/BookController.php
+ created: templates/book/index.html.twig
+
+
+  Success!
+
+
+ Next: Open your new controller class and add some pages!
+
+C:\Users\28952\Desktop\OSPanel\domains\books>php bin/console make:entity
+
+ Class name of the entity to create or update (e.g. GrumpyElephant):
+ > Author
+
+ created: src/Entity/Author.php
+ created: src/Repository/AuthorRepository.php
+
+ Entity generated! Now let's add some fields!
+ You can always add more fields later manually or by re-running this command.
+
+ New property name (press <return> to stop adding fields):
+ > name
+
+ Field type (enter ? to see all types) [string]:
+ > string
+
+ Field length [255]:
+ > 200
+
+ Can this field be null in the database (nullable) (yes/no) [no]:
+ >
+
+ updated: src/Entity/Author.php
+
+ Add another property? Enter the property name (or press <return> to stop adding fields):
+ >
+
+
+
+  Success!
+
+
+ Next: When you're ready, create a migration with make:migration
+
+
+C:\Users\28952\Desktop\OSPanel\domains\books>php bin/console make:migration
+
+In AbstractMySQLDriver.php line 93:
+
+  An exception occurred in driver: SQLSTATE[HY000] [1045] Access denied for user 'db_user'@'localhost' (using pas
+   YES)
+
+
+In PDOConnection.php line 31:
+
+  SQLSTATE[HY000] [1045] Access denied for user 'db_user'@'localhost' (using password: YES)
+
+
+In PDOConnection.php line 27:
+
+  SQLSTATE[HY000] [1045] Access denied for user 'db_user'@'localhost' (using password: YES)
+
+
+make:migration [--db DB] [--em [EM]] [--shard SHARD] [-h|--help] [-q|--quiet] [-v|vv|vvv|--verbose] [-V|--version] [--no-ansi] [-n|--no-interaction] [-e|--env ENV] [--no-debug] [--] <command>
+
+
+C:\Users\28952\Desktop\OSPanel\domains\books>php bin/console make:migration
+
+In AbstractMySQLDriver.php line 93:
+
+  An exception occurred in driver: SQLSTATE[HY000] [1045] Access denied for user 'db_user'@'localhost' (using pas
+   YES)
+
+
+In PDOConnection.php line 31:
+
+  SQLSTATE[HY000] [1045] Access denied for user 'db_user'@'localhost' (using password: YES)
+
+
+In PDOConnection.php line 27:
+
+  SQLSTATE[HY000] [1045] Access denied for user 'db_user'@'localhost' (using password: YES)
+
+
+make:migration [--db DB] [--em [EM]] [--shard SHARD] [-h|--help] [-q|--quiet] [-v|vv|vvv|--verbose] [-V|--version] [--no-ansi] [-n|--no-interaction] [-e|--env ENV] [--no-debug] [--] <command>
+
+
+C:\Users\28952\Desktop\OSPanel\domains\books>php bin/console make:migration
+
+
+  Success!
+
+
+ Next: Review the new migration "src/Migrations/Version20190712171716.php"
+ Then: Run the migration with php bin/console doctrine:migrations:migrate
+ See https://symfony.com/doc/current/bundles/DoctrineMigrationsBundle/index.html
+
+C:\Users\28952\Desktop\OSPanel\domains\books>php bin/console doctrine:migrations:migrate
+
+                    Application Migrations
+
+
+WARNING! You are about to execute a database migration that could result in schema changes and data loss. Are you wish to continue? (y/n)y
+Migrating up to 20190712171716 from 0
+
+  ++ migrating 20190712171716
+
+     -> CREATE TABLE author (id INT AUTO_INCREMENT NOT NULL, name VARCHAR(200) NOT NULL, PRIMARY KEY(id)) DEFAULTR SET utf8mb4 COLLATE utf8mb4_unicode_ci ENGINE = InnoDB
+
+  ++ migrated (took 564ms, used 14M memory)
+
+  ------------------------
+
+  ++ finished in 606ms
+  ++ used 14M memory
+  ++ 1 migrations executed
+  ++ 1 sql queries
+
+C:\Users\28952\Desktop\OSPanel\domains\books>php bin/console make:entity
+
+ Class name of the entity to create or update (e.g. FierceKangaroo):
+ > Book
+
+ created: src/Entity/Book.php
+ created: src/Repository/BookRepository.php
+
+ Entity generated! Now let's add some fields!
+ You can always add more fields later manually or by re-running this command.
+
+ New property name (press <return> to stop adding fields):
+ > title
+
+ Field type (enter ? to see all types) [string]:
+ >
+
+ Field length [255]:
+ >
+
+ Can this field be null in the database (nullable) (yes/no) [no]:
+ >
+
+ updated: src/Entity/Book.php
+
+ Add another property? Enter the property name (or press <return> to stop adding fields):
+ > description
+
+ Field type (enter ? to see all types) [string]:
+ >
+
+ Field length [255]:
+ > 600
+
+ Can this field be null in the database (nullable) (yes/no) [no]:
+ >
+
+ updated: src/Entity/Book.php
+
+ Add another property? Enter the property name (or press <return> to stop adding fields):
+ > author
+
+ Field type (enter ? to see all types) [string]:
+ > relation
+
+ What class should this entity be related to?:
+ > Author
+
+What type of relationship is this?
+ ------------ ------------------------------------------------------------------
+  Type         Description
+ ------------ ------------------------------------------------------------------
+  ManyToOne    Each Book relates to (has) one Author.
+               Each Author can relate to (can have) many Book objects
+
+  OneToMany    Each Book can relate to (can have) many Author objects.
+               Each Author relates to (has) one Book
+
+  ManyToMany   Each Book can relate to (can have) many Author objects.
+               Each Author can also relate to (can also have) many Book objects
+
+  OneToOne     Each Book relates to (has) exactly one Author.
+               Each Author also relates to (has) exactly one Book.
+ ------------ ------------------------------------------------------------------
+
+ Relation type? [ManyToOne, OneToMany, ManyToMany, OneToOne]:
+ > ManyToOne
+
+ Is the Book.author property allowed to be null (nullable)? (yes/no) [yes]:
+ >
+
+ Do you want to add a new property to Author so that you can access/update Book objects from it - e.g. $author->g? (yes/no) [yes]:
+ >
+
+ A new property will also be added to the Author class so that you can access the related Book objects from it.
+
+ New field name inside Author [books]:
+ >
+
+ updated: src/Entity/Book.php
+ updated: src/Entity/Author.php
+
+ Add another property? Enter the property name (or press <return> to stop adding fields):
+ >
+
+
+
+  Success!
+
+
+ Next: When you're ready, create a migration with make:migration
+
+
+C:\Users\28952\Desktop\OSPanel\domains\books>php make:migration
+Could not open input file: make:migration
+
+C:\Users\28952\Desktop\OSPanel\domains\books>php bin/console make:migration
+
+
+  Success!
+
+
+ Next: Review the new migration "src/Migrations/Version20190712172305.php"
+ Then: Run the migration with php bin/console doctrine:migrations:migrate
+ See https://symfony.com/doc/current/bundles/DoctrineMigrationsBundle/index.html
+
+C:\Users\28952\Desktop\OSPanel\domains\books>php bin/console doctrine:migrations:migrate
+
+                    Application Migrations
+
+
+WARNING! You are about to execute a database migration that could result in schema changes and data loss. Are you wish to continue? (y/n)y
+Migrating up to 20190712172305 from 20190712171716
+
+  ++ migrating 20190712172305
+
+     -> CREATE TABLE book (id INT AUTO_INCREMENT NOT NULL, author_id INT DEFAULT NULL, title VARCHAR(255) NOT NULption VARCHAR(600) NOT NULL, INDEX IDX_CBE5A331F675F31B (author_id), PRIMARY KEY(id)) DEFAULT CHARACTER SET utf8mE utf8mb4_unicode_ci ENGINE = InnoDB
+     -> ALTER TABLE book ADD CONSTRAINT FK_CBE5A331F675F31B FOREIGN KEY (author_id) REFERENCES author (id)
+
+  ++ migrated (took 418ms, used 14M memory)
+
+  ------------------------
+
+  ++ finished in 429ms
+  ++ used 14M memory
+  ++ 1 migrations executed
+  ++ 2 sql queries
+
+C:\Users\28952\Desktop\OSPanel\domains\books>php bin/console server:run
+
+
+ [OK] Server listening on http://127.0.0.1:8000
+
+
+ // Quit the server with CONTROL-C.
+
+^C
+C:\Users\28952\Desktop\OSPanel\domains\books>php bin/console server:run
+
+In RegisterControllerArgumentLocatorsPass.php line 173:
+
+  Cannot determine controller argument for "App\Controller\BookController::addBook()": the $request argument is t
+  nted with the non-existent class or interface: "Symfony\Component\Routing\HttpFoundation\Request".
+
+
+
+C:\Users\28952\Desktop\OSPanel\domains\books>php bin/console server:run
+
+
+ [OK] Server listening on http://127.0.0.1:8000
+
+
+ // Quit the server with CONTROL-C.
+
+DATABASE_URL=mysql://root:@127.0.0.1:3306/db_name
+###< doctrine/doctrine-bundle ###
